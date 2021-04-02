@@ -5,4 +5,3 @@ class Window:
 		pygame.init()
 		pygame.display.set_caption(name)	
 		GameLoop(pygame.display.set_mode(size), game_objects)
-		

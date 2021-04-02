@@ -24,7 +24,7 @@ class GameLoop:
 				if event.type == pygame.QUIT:
 					isRunning = False
 
-				self.__foreach_GO(lambda GO: GO.handle_input())
+				self.__foreach_GO(lambda GO: GO.handle_input(event))
 
 			self.__foreach_GO(lambda GO: GO.render(self.__window))
 			pygame.display.update()
