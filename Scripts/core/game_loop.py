@@ -18,7 +18,7 @@ class GameLoop:
 
 		while (isRunning):
 			pygame.time.delay(self.__delta_time)
-			self.__foreach_GO(lambda GO: GO.update())
+			self.__foreach_GO(lambda GO: GO.update(self.__delta_time))
 
 			for event in pygame.event.get():
 				if event.type == pygame.QUIT:
@@ -26,6 +26,7 @@ class GameLoop:
 
 				self.__foreach_GO(lambda GO: GO.handle_input(event))
 
+			self.__window.fill((0))
 			self.__foreach_GO(lambda GO: GO.render(self.__window))
 			pygame.display.update()
 

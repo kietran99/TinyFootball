@@ -2,7 +2,7 @@ class GameObject:
 	def start(self):
 		pass
 
-	def update(self):
+	def update(self, delta):
 		pass
 
 	def handle_input(self, event):
