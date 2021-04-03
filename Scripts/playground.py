@@ -6,6 +6,8 @@ from color import WHITE
 
 from config import WINDOW_WIDTH, WINDOW_HEIGHT
 
+from box_collider import BoxCollider
+
 class Rectangle(GameObject):
 	def __init__(self, color: tuple[int, int, int], left: float, top: float, width: float, height: float):
 		self.__left = left
@@ -13,9 +15,11 @@ class Rectangle(GameObject):
 		self.__width = width
 		self.__height = height
 		self.__color = color
+		self.__box_collider = BoxCollider((width + 10, height + 10), (left, top), True)
 
 	def render(self, window):
 		pygame.draw.rect(window, self.__color, pygame.Rect(self.__left, self.__top, self.__width, self.__height))
+		self.__box_collider.render(window)
 
 class Playground(GameObject):
 	def __init__(self, rect: pygame.rect, border_width: int, goal_len: int):
