@@ -1,6 +1,6 @@
 import pygame
 
-from config import *
+from core_config import DELTA_TIME
 from utils import *
 from game_object import *
 

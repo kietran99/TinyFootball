@@ -9,7 +9,7 @@ class TimerText(Text):
 
 	def __show_current_time(self, cur_time_milsec):
 		min = cur_time_milsec // 60000
-		print("Min: " + str(min))
+		# print("Min: " + str(min))
 		sec = cur_time_milsec % 60000 // 1000
-		print("Sec: " + str(sec))
+		# print("Sec: " + str(sec))
 		self.text = self._format_num(min) + ":" + self._format_num(sec)

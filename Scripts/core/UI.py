@@ -2,7 +2,7 @@ import pygame
 
 from utils import *
 
-from config import FONT_PATH
+from core_config import FONT_PATH
 from game_object import GameObject
 
 class Text(GameObject):

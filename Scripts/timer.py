@@ -20,5 +20,5 @@ class Timer(GameObject):
 			trigger(game_over, None)
 
 		if self.__time_passed % 1000 == 0:
-			print(self.__match_time - self.__time_passed)
+			# print(self.__match_time - self.__time_passed)
 			trigger(a_second_passed, self.__match_time - self.__time_passed)

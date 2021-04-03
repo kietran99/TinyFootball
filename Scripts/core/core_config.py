@@ -1,0 +1,3 @@
+DELTA_TIME = 50
+
+FONT_PATH = "../Fonts/VCR_OSD_MONO_1.001.ttf"
